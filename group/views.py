@@ -3,7 +3,8 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
 
-from group.serializers import GroupSerializer, GroupTreeSerializer
+from group.serializers import GroupSerializer
+from group.tree_serializer import GroupTreeSerializer
 from group.models import Group
 
 

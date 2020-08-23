@@ -9,8 +9,8 @@ class PositionSerializer(ModelSerializer):
         fields = '__all__'
 
 
-class PositionTreeSerializer(ModelSerializer):
+class PositionUserSerializer(ModelSerializer):
     class Meta:
         model = Position
-        exclude = ['group']
+        exclude = ['user']
         depth = 1
