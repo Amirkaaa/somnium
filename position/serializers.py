@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from .models import Position
+from position.models import Position
 
 
 class PositionSerializer(ModelSerializer):
@@ -8,3 +8,9 @@ class PositionSerializer(ModelSerializer):
         model = Position
         fields = '__all__'
 
+
+class PositionTreeSerializer(ModelSerializer):
+    class Meta:
+        model = Position
+        exclude = ['group']
+        depth = 1
